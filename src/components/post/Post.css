@@ -1,0 +1,21 @@
+.blog-post {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 50px 90px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.blog-post .post-title {
+  font-size: 25px;
+}
+
+.blog-post .post-author {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.blog-post .post-content {
+  margin-bottom: 20px;
+}

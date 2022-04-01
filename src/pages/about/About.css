@@ -1,0 +1,11 @@
+.about {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 50px 90px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.about p {
+  margin-top: 10px;
+}

@@ -1,0 +1,64 @@
+form.create {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 50px 90px;
+  border-radius: 10px;
+}
+
+form.create label {
+  text-align: left;
+  width: 300px;
+}
+
+form.create span {
+  text-align: left;
+  margin-left: 20px;
+  font-size: 14px;
+  color: #777;
+}
+
+form.create label input {
+  display: block;
+  width: 100%;
+  line-height: 22px;
+  padding: 10px 20px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: 1px solid #777;
+}
+
+form.create textarea {
+  width: 600px;
+  height: 200px;
+  padding: 10px 20px;
+  font-size: 15px;
+  border-radius: 10px;
+}
+
+form.create input:focus,
+form.create textarea:focus {
+  outline: none;
+  border-color: black;
+}
+
+form.create button {
+  font-size: 16px;
+  padding: 5px 20px;
+  border: 1px solid rgb(61, 61, 231);
+  border-radius: 10px;
+  background-color: rgb(61, 61, 231);
+  color: white;
+  cursor: pointer;
+  transition: color 0.1s linear, background-color 0.1s linear;
+}
+
+form.create button:hover {
+  background-color: #fff;
+  color: rgb(61, 61, 231);
+}
