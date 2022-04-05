@@ -1,7 +1,8 @@
 import "./Create.css";
 
+import { useEffect, useState } from "react";
+import { useFetch } from "../../hooks/useFetch";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
 
 export default function Create() {
   const [title, setTitle] = useState("");
@@ -10,10 +11,21 @@ export default function Create() {
 
   const navigate = useNavigate();
 
+  const { postData, data, error } = useFetch(
+    "http://localhost:3000/posts",
+    "POST"
+  );
+
   const handleSubmit = e => {
     e.preventDefault();
-    console.log("adding post:", title, author, content);
+    postData({ title, author, content });
   };
+
+  useEffect(() => {
+    if (data) {
+      navigate("/");
+    }
+  }, [data]);
 
   return (
     <form className="create" onSubmit={handleSubmit}>
