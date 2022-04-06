@@ -2,7 +2,9 @@ import "./Post.css";
 
 import { useNavigate, useParams } from "react-router-dom";
 import { useFetch } from "../../hooks/useFetch";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import Loading from "../loading/Loading";
+import Error from "../error/Error";
 
 export default function Post() {
   const params = useParams();
@@ -25,8 +27,8 @@ export default function Post() {
 
   return (
     <div className="blog-content">
-      {error && !deleted && <p>{error}</p>}
-      {isPending && <p>Loading...</p>}
+      {error && !deleted && <Error message={error} />}
+      {isPending && <Loading />}
       {post && !deleted && (
         <div className="blog-post">
           <h2 className="post-title">{post.title}</h2>
@@ -38,9 +40,12 @@ export default function Post() {
         </div>
       )}
       {deleted && (
-        <button className="btn deleted" onClick={() => navigate("/")}>
-          Back to homepage
-        </button>
+        <div className="deleted">
+          <p>Post deleted succesfully.</p>
+          <button className="btn" onClick={() => navigate("/")}>
+            Back to homepage
+          </button>
+        </div>
       )}
     </div>
   );

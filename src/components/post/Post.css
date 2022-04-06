@@ -1,4 +1,4 @@
-.blog-post {
+.blog-content {
   max-width: 1200px;
   margin: 50px auto;
   padding: 50px 90px;
@@ -17,5 +17,13 @@
 }
 
 .blog-post .post-content {
+  margin-bottom: 20px;
+}
+
+.deleted {
+  text-align: center;
+}
+
+.deleted p {
   margin-bottom: 20px;
 }
