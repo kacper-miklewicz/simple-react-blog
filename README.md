@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### Important: before running this app, you need to enable json-server by typing in project directory:
+### Important! Before running this app, you need to enable json-server by typing in project directory:
 
 `json-server --watch ./data/db.json`
 
